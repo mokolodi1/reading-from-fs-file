@@ -2,8 +2,6 @@ Meteor.methods({
 
   parseFile: function (fileId) {
 
-    var currentUserId = Meteor.call("assertLoggedIn");
-
     console.log("fileId: " + fileId);
 
     var theFile = UploadedFiles.findOne({_id: fileId});
