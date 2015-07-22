@@ -11,8 +11,8 @@ Meteor.methods({
 
     // this will crash
     theFile.createReadStream("uploaded_files")
-      .on('data', function () {
-        console.log("data!");
+      .on('data', function (chunk) {
+        console.log("data! " + chunk);
       });
 
     // this is the place where I want to read text inside theFile
